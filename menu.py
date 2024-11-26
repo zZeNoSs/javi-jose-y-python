@@ -1,5 +1,5 @@
 # menu.py
-from operaciones import sumar, restar, multiplicar
+from operaciones import sumar, restar, multiplicar, dividir
 
 def mostrar_menu():
     print("1- Sumar")
@@ -10,7 +10,10 @@ def mostrar_menu():
     opcion = input("Seleccione una opción: ")
     return opcion
 
-def ejecutar_opcion(opcion):
+
+
+
+def ejecutar_division(opcion):
     if opcion == '1':
         a = float(input("Ingrese el primer número: "))
         b = float(input("Ingrese el segundo número: "))
@@ -35,6 +38,7 @@ def ejecutar_opcion(opcion):
             print(f"Resultado: {resultado}")
         except ValueError as e:
             print(e)
+<<<<<<< HEAD
 from operaciones import dividir
 
 def ejecutar_dividir(opcion):
@@ -62,6 +66,8 @@ def ejecutar_dividir(opcion):
             print(f"Resultado: {resultado}")
         except ValueError as e:
             print(e)
+=======
+>>>>>>> feature/menu
     elif opcion == '4':
         a = float(input("Ingrese el primer número: "))
         b = float(input("Ingrese el segundo número: "))
@@ -70,3 +76,7 @@ def ejecutar_dividir(opcion):
             print(f"Resultado: {resultado}")
         except ValueError as e:
             print(e)
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/menu
