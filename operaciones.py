@@ -13,10 +13,16 @@ def restar(a, b):
 
 def multiplicar(a, b):
     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        b_int = int(abs(b))
         resultado = 0
-        for _ in range(abs(b)):
+
+        for _ in range(b_int):
             resultado += a
-        return resultado if b >= 0 else -resultado
+
+        if b < 0:
+            resultado = -resultado
+
+        return resultado
     else:
         raise ValueError("Ambos parámetros deben ser int o float")
 def dividir(a, b):

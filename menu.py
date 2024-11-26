@@ -10,73 +10,30 @@ def mostrar_menu():
     opcion = input("Seleccione una opción: ")
     return opcion
 
+def ejecutar_operacion(opcion):
+    if opcion == '5':
+        print("Saliendo del programa...")
+        return False
 
+    a = float(input("Ingrese el primer número: "))
+    b = float(input("Ingrese el segundo número: "))
 
-
-def ejecutar_division(opcion):
-    if opcion == '1':
-        a = float(input("Ingrese el primer número: "))
-        b = float(input("Ingrese el segundo número: "))
-        try:
+    try:
+        if opcion == '1':
             resultado = sumar(a, b)
             print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-    elif opcion == '2':
-        a = float(input("Ingrese el primer número: "))
-        b = float(input("Ingrese el segundo número: "))
-        try:
+        elif opcion == '2':
             resultado = restar(a, b)
             print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-    elif opcion == '3':
-        a = float(input("Ingrese el primer número: "))
-        b = float(input("Ingrese el segundo número: "))
-        try:
+        elif opcion == '3':
             resultado = multiplicar(a, b)
             print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-<<<<<<< HEAD
-from operaciones import dividir
-
-def ejecutar_dividir(opcion):
-    if opcion == '1':
-        a = float(input("Ingrese el primer número: "))
-        b = float(input("Ingrese el segundo número: "))
-        try:
-            resultado = sumar(a, b)
-            print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-    elif opcion == '2':
-        a = float(input("Ingrese el primer número: "))
-        b = float(input("Ingrese el segundo número: "))
-        try:
-            resultado = restar(a, b)
-            print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-    elif opcion == '3':
-        a = float(input("Ingrese el primer número: "))
-        b = float(input("Ingrese el segundo número: "))
-        try:
-            resultado = multiplicar(a, b)
-            print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-=======
->>>>>>> feature/menu
-    elif opcion == '4':
-        a = float(input("Ingrese el primer número: "))
-        b = float(input("Ingrese el segundo número: "))
-        try:
+        elif opcion == '4':
             resultado = dividir(a, b)
             print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-<<<<<<< HEAD
-=======
-
->>>>>>> feature/menu
+        else:
+            print("Opción no válida")
+            return True
+    except ValueError as e:
+        print(e)
+    return True
