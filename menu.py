@@ -12,7 +12,7 @@ def mostrar_menu():
     opcion = input("Seleccione una opción: ")
     return opcion
 
-def ejecutar_opcion(opcion):
+def ejecutar_operacion(opcion):
     if opcion == '5':
         print("Saliendo del programa...")
         return False
