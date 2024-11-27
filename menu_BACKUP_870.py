@@ -1,13 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo
 =======
 # menu.py
 from operaciones import factorial_recursivo
 >>>>>>> feature/factorial_recursivo
-=======
-from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo, fibonacci
->>>>>>> feature/fibonacci
 
 def mostrar_menu():
     print("1- Sumar")
@@ -17,24 +13,6 @@ def mostrar_menu():
     print("5- Salir")
     print("6- Calcular el factorial de un número (iterativo)")
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    print("7- Calcular el fibonacci de un número (iterativo)")
-    opcion = input("Seleccione una opción: ")
-    return opcion
-
-def ejecutar_operacion(opcion):
-from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo, fibonacci
-
-def mostrar_menu():
-    print("1- Sumar")
-    print("2- Restar")
-    print("3- Multiplicar")
-    print("4- Dividir")
-    print("5- Salir")
-    print("6- Calcular el factorial de un número (iterativo)")
-    print("7- Calcular el fibonacci de un número (iterativo)")
->>>>>>> feature/fibonacci
     opcion = input("Seleccione una opción: ")
     return opcion
 
@@ -62,15 +40,6 @@ def ejecutar_opcion(opcion):
             print(e)
         return True
 
-    if opcion == '7':
-        a = int(input("Ingrese un número: "))
-        try:
-            resultado = fibonacci(a)
-            print(f"Resultado: {resultado}")
-        except ValueError as e:
-            print(e)
-        return True
-
     a = float(input("Ingrese el primer número: "))
     b = float(input("Ingrese el segundo número: "))
 
@@ -93,7 +62,6 @@ def ejecutar_opcion(opcion):
             return True
     except ValueError as e:
         print(e)
-<<<<<<< HEAD
     return True
 =======
         except ValueError as e:
@@ -114,15 +82,3 @@ def ejecutar_opcion(opcion):
         except ValueError as e:
             print(e)
 >>>>>>> feature/factorial_recursivo
-=======
-        return True
-
-def main():
-    while True:
-        opcion = mostrar_menu()
-        if not ejecutar_operacion(opcion):
-            break
-
-if __name__ == "__main__":
-    main()
->>>>>>> feature/fibonacci
