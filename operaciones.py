@@ -36,3 +36,10 @@ def dividir(a, b):
         return resultado
     else:
         raise ValueError("Ambos parámetros deben ser int o float")
+def factorial_iterativo(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("El valor debe ser un entero no negativo")
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
