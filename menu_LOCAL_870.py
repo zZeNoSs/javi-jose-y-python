@@ -1,4 +1,4 @@
-from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo, factorial_recursivo, fibonacci
+from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo
 
 def mostrar_menu():
     print("1- Sumar")
@@ -7,39 +7,19 @@ def mostrar_menu():
     print("4- Dividir")
     print("5- Salir")
     print("6- Calcular el factorial de un número (iterativo)")
-    print("7- Calcular el factorial de un número (recursivo)")
-    print("8- Sucesión de fibonaacci")
     opcion = input("Seleccione una opción: ")
     return opcion
 
-def ejecutar_opcion(opcion):
+def ejecutar_operacion(opcion):
     if opcion == '5':
         print("Saliendo del programa...")
         return False
 
-    if opcion == '6': 
+    if opcion == '6':
         a = int(input("Ingrese un número: "))
         try:
             resultado = factorial_iterativo(a)
-            print(f"Resultado (iterativo): {resultado}")
-        except ValueError as e:
-            print(e)
-        return True
-
-    if opcion == '7': 
-        a = int(input("Ingrese un número: "))
-        try:
-            resultado = factorial_recursivo(a)
-            print(f"Resultado (recursivo): {resultado}")
-        except ValueError as e:
-            print(e)
-        return True
-
-    if opcion == '8': 
-        a = int(input("Ingrese un número: "))
-        try:
-            resultado = fibonacci(a)
-            print(f"Resultado (fibonacci): {resultado}")
+            print(f"Resultado: {resultado}")
         except ValueError as e:
             print(e)
         return True
@@ -65,6 +45,4 @@ def ejecutar_opcion(opcion):
             return True
     except ValueError as e:
         print(e)
-
     return True
-
