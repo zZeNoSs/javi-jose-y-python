@@ -25,6 +25,7 @@ def multiplicar(a, b):
         return resultado
     else:
         raise ValueError("Ambos parámetros deben ser int o float")
+
 def dividir(a, b):
     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
         if b == 0:
@@ -36,6 +37,7 @@ def dividir(a, b):
         return resultado
     else:
         raise ValueError("Ambos parámetros deben ser int o float")
+
 def factorial_iterativo(n):
     if not isinstance(n, int) or n < 0:
         raise ValueError("El valor debe ser un entero no negativo")
@@ -43,3 +45,11 @@ def factorial_iterativo(n):
     for i in range(1, n + 1):
         resultado *= i
     return resultado
+
+def fibonacci(n):
+    if not isinstance(n, int):
+        raise ValueError("El valor debe ser un entero")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a

@@ -1,4 +1,4 @@
-from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo
+from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo, fibonacci
 
 def mostrar_menu():
     print("1- Sumar")
@@ -7,6 +7,21 @@ def mostrar_menu():
     print("4- Dividir")
     print("5- Salir")
     print("6- Calcular el factorial de un número (iterativo)")
+    print("7- Calcular el fibonacci de un número (iterativo)")
+    opcion = input("Seleccione una opción: ")
+    return opcion
+
+def ejecutar_operacion(opcion):
+from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo, fibonacci
+
+def mostrar_menu():
+    print("1- Sumar")
+    print("2- Restar")
+    print("3- Multiplicar")
+    print("4- Dividir")
+    print("5- Salir")
+    print("6- Calcular el factorial de un número (iterativo)")
+    print("7- Calcular el fibonacci de un número (iterativo)")
     opcion = input("Seleccione una opción: ")
     return opcion
 
@@ -19,6 +34,15 @@ def ejecutar_operacion(opcion):
         a = int(input("Ingrese un número: "))
         try:
             resultado = factorial_iterativo(a)
+            print(f"Resultado: {resultado}")
+        except ValueError as e:
+            print(e)
+        return True
+
+    if opcion == '7':
+        a = int(input("Ingrese un número: "))
+        try:
+            resultado = fibonacci(a)
             print(f"Resultado: {resultado}")
         except ValueError as e:
             print(e)
@@ -45,4 +69,13 @@ def ejecutar_operacion(opcion):
             return True
     except ValueError as e:
         print(e)
-    return True
+        return True
+
+def main():
+    while True:
+        opcion = mostrar_menu()
+        if not ejecutar_operacion(opcion):
+            break
+
+if __name__ == "__main__":
+    main()
