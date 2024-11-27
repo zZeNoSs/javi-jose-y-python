@@ -36,6 +36,7 @@ def dividir(a, b):
         return resultado
     else:
         raise ValueError("Ambos parámetros deben ser int o float")
+<<<<<<< HEAD
 def factorial_iterativo(n):
     if not isinstance(n, int) or n < 0:
         raise ValueError("El valor debe ser un entero no negativo")
@@ -43,3 +44,13 @@ def factorial_iterativo(n):
     for i in range(1, n + 1):
         resultado *= i
     return resultado
+=======
+def factorial_recursivo(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("El valor debe ser un entero no negativo")
+    if n == 0:
+        return 1
+    else:
+        return n * factorial_recursivo(n - 1)
+o
+>>>>>>> feature/factorial_recursivo
